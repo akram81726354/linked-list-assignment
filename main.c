@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 struct student {
-    //int data;
     char Name[50];
     int id;
     int day,month,year;
@@ -14,13 +13,18 @@ struct student {
         void displayList();
         void insertNodeAtMiddle(int position);
         void createList(int n);
-int main() {
+int main() {    int choice;int position;
+     //printf("1.use linked list\n2.use dynamic array\n\n");
+     //printf("Enter your choice: ");
+     //scanf("%d",&choice);
+
+
          printf("If you Need to initialize list ,Enter the total number of nodes: ");
         int n;
         scanf("%d", &n);
          createList(n);
 
-    int choice;int position;
+
        while(1){
             printf("chosse your operation : \n \n");
       printf("1.Insert AtBeginning\n2.Insert AtEnd\n3.Insert AtMiddle\n4.Display\n5.Exit\n\n");
@@ -38,6 +42,7 @@ int main() {
 	 default: printf("\nWrong selection!!! Please try again!!!\n");
       }
    }
+
     //printf("Enter information of students:\n");
 
     // storing information
@@ -286,3 +291,4 @@ void createList(int n)
         printf("SINGLY LINKED LIST CREATED SUCCESSFULLY\n");
     }
 }
+
